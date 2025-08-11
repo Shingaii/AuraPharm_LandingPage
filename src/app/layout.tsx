@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { ExploreProvider } from "@/components/providers/ExploreProvider";
+import { PanelProvider } from "@/components/providers/PanelProvider";
+import { ImmersiveProvider } from "@/components/providers/ImmersiveProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={inter.className}>
+        <SmoothScroll>
+          <ExploreProvider>
+            <PanelProvider>
+              <ImmersiveProvider>{children}</ImmersiveProvider>
+            </PanelProvider>
+          </ExploreProvider>
+        </SmoothScroll>
+      </body>
     </html>
   );
 }

@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StatsAI - AI-Driven Website Analytics & Sales Platform
+
+A modern, responsive SaaS landing page built with Next.js, TypeScript, Tailwind CSS, and ShadCN components.
+
+## Features
+
+- **Fully Fluid Design**: Responsive layout that adapts to all screen sizes
+- **Modern Navbar**: Logo, primary navigation (5 links), and CTA buttons
+- **Hero Section**: 100vh height with large headline and CTA button
+- **Interactive Background**: Prepared div for unicorn.studio interactive elements
+- **Component-Based Architecture**: Built with reusable ShadCN UI components
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Components**: ShadCN UI components
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js app router pages
+├── components/          # React components
+│   ├── ui/             # ShadCN UI components
+│   ├── Navbar.tsx      # Navigation component
+│   └── Hero.tsx        # Hero section component
+└── lib/                # Utility functions
+    └── utils.ts        # Class name merging utility
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project uses a comprehensive design system with:
+- Custom CSS variables for colors, typography, and spacing
+- Consistent component variants (primary, secondary, outline)
+- Responsive breakpoints and fluid typography
+- Accessible color contrasts and focus states
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Customization
 
-## Learn More
+- **Colors**: Modify CSS variables in `src/app/globals.css`
+- **Components**: Edit component files in `src/components/`
+- **Layout**: Adjust spacing and sizing in component classes
+- **Background**: Add interactive elements to the `#unicorn-background` div
 
-To learn more about Next.js, take a look at the following resources:
+## Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT
