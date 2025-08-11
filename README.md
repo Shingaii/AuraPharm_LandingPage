@@ -1,4 +1,4 @@
-AuraPharm Landing Page Mockup_v1
+## AuraPharm Landing Page Mockup_v1
 
 A modern, responsive SaaS landing page built with Next.js, TypeScript, Tailwind CSS, and ShadCN components.
 
